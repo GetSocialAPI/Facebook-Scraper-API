@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "getsocialapi-facebook"
+version = "0.1.0"
+description = "GetSocialAPI — Python client for the Facebook Scraper API (groups, profiles, connections)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "GetSocialAPI" }]
+requires-python = ">=3.9"
+dependencies = ["requests>=2.25"]
+keywords = ["facebook", "api", "scraping", "sdk", "groups", "members"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://getsocialapi.com"
+Documentation = "https://getsocialapi.com/docs/"
+
+[tool.setuptools.packages.find]
+include = ["getsocialapi_facebook*"]
