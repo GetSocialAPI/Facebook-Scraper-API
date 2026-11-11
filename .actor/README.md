@@ -4,6 +4,8 @@ Get Facebook group and profile data using GetSocialAPI on Apify. The Actor
 resolves Facebook URLs and retrieves group members, posts, feeds, and profile
 connections where the upstream API provides them.
 
+**No Facebook account or Facebook session cookies are required.**
+
 ## Quick start
 
 Resolve a group URL to its numeric ID:
