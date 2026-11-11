@@ -1,0 +1,54 @@
+{
+  "title": "Facebook Scraper API",
+  "description": "Select an operation and enter a Facebook URL or numeric ID.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "operation": {
+      "title": "Operation",
+      "type": "string",
+      "description": "Select the Facebook endpoint to call.",
+      "editor": "select",
+      "enum": [
+        "resolve_group",
+        "resolve_profile",
+        "group_overview",
+        "group_members",
+        "group_posts",
+        "profile_about",
+        "profile_posts",
+        "profile_feed",
+        "group_feed",
+        "followers",
+        "following",
+        "friends"
+      ],
+      "default": "resolve_group"
+    },
+    "target": {
+      "title": "Target",
+      "type": "string",
+      "description": "Full Facebook URL for resolve operations. Numeric group or profile ID for other operations.",
+      "editor": "textfield",
+      "minLength": 1,
+      "prefill": "https://www.facebook.com/groups/freegarden/"
+    },
+    "after": {
+      "title": "Page cursor",
+      "type": "string",
+      "description": "Optional end_cursor from the previous page.",
+      "editor": "textfield"
+    },
+    "per_page": {
+      "title": "Page size",
+      "type": "integer",
+      "description": "Optional for profile_feed and group_feed. Defaults to 10.",
+      "editor": "number",
+      "minimum": 3,
+      "maximum": 20
+    }
+  },
+  "required": [
+    "target"
+  ]
+}

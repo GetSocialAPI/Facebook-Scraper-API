@@ -1,0 +1,23 @@
+{
+  "actorSpecification": 1,
+  "name": "facebook-scraper-api",
+  "title": "Facebook Scraper API",
+  "description": "Get Facebook group and profile data, members, posts, feeds, and connections with GetSocialAPI.",
+  "version": "0.0",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "dockerContextDir": "../",
+  "readme": "./README.md",
+  "input": "./input_schema.json",
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "title": "GetSocialAPI results",
+    "properties": {
+      "results": {
+        "type": "string",
+        "title": "Results",
+        "template": "{{links.apiDefaultDatasetUrl}}/items"
+      }
+    }
+  }
+}
